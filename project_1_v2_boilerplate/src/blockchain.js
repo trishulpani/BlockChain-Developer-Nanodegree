@@ -77,10 +77,17 @@ class Blockchain {
           //since any change in the block data will affect the hash and will fail validation.
           block.hash = SHA256(JSON.stringify(block)).toString();
 
-          self.chain.push(block);
-          self.height = blockHeight;
-
-          resolve(self);
+          self
+            .validateChain()
+            .then(() => {
+              self.chain.push(block);
+              self.height = blockHeight;
+              resolve(self);
+            })
+            .catch((error) => {
+              console.log(error);
+              reject(error);
+            });
         });
       } catch (error) {
         reject(error);
@@ -199,18 +206,22 @@ class Blockchain {
     let self = this;
     let stars = [];
     return new Promise(async (resolve, reject) => {
-      try{
+      try {
         self.chain.forEach((block) => {
-            block.getBData().then( decodedBlock => {
+          block
+            .getBData()
+            .then((decodedBlock) => {
               if (decodedBlock && decodedBlock.owner === address)
                 stars.push(decodedBlock);
-            }).catch(error =>{ console.log(error)});
-          });
-          resolve(stars);
-      }catch(error){
-          reject(error);
-      } 
-     
+            })
+            .catch((error) => {
+              console.log(error);
+            }); //will throw ERR_UNHANDLED_REJECTION otherwise.
+        });
+        resolve(stars);
+      } catch (error) {
+        reject(error);
+      }
     });
   }
 
@@ -227,7 +238,7 @@ class Blockchain {
       let chainHeight = await self.getChainHeight();
       if (chainHeight > 0) {
         //for each block , validate the block and add to errors if there are any errors
-        for (let i = 0; i <= self.chain.length; i++) {
+        for (let i = 0; i < self.chain.length; i++) {
           let isValid = await self.chain[i].validate();
           if (!isValid) {
             errorLog.push("Unable to validate block: " + b.height);
@@ -240,7 +251,7 @@ class Blockchain {
           resolve("Chain validated successfully");
         }
       } else {
-        reject("Unable to validate chain");
+        resolve("Insufficient chain height for validation.");
       }
     });
   }

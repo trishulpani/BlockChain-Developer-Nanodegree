@@ -32,7 +32,8 @@ You should see in your terminal a message indicating that the server is listenin
      ![Request: http://localhost:8000/submitstar](screenshots/SubmitStar.png)
 6. Retrieve Stars owned by me
     ![Request: http://localhost:8000/blocks/<WALLET_ADDRESS>](screenshots/GetStarsByOwner.png)
-
+7. Validate Blockchain
+    ![Request: http://localhost:8000/validateChain](screenshots/ValidateBlockChain.png)
 
 
 

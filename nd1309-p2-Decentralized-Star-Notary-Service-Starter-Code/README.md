@@ -140,6 +140,15 @@ Do not use the [Old depreacted zipped starter code](https://s3.amazonaws.com/vid
 
 
 # Evidence of working app
+
+1. Specify the Truffle version and OpenZeppelin version used in the project.
+   Truffle version: 5.4.31, OpenZeppelin version: ^4.4.2
+2. Your ERC-721 Token Name: Maha Token
+3. Your ERC-721 Token Symbol: MTKN
+4. Your “Token Address” on the Rinkeby Network: 0x5d770e1e61D42D07e85f1573Fe17ebE56D8b54c2
+
+
+
 ## Create Star on Rinkeby Test network
 Star Owner Address: 0x5d770e1e61D42D07e85f1573Fe17ebE56D8b54c2
 

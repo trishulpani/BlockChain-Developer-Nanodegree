@@ -1,0 +1,127 @@
+truffle(develop)> truffle migrate --reset --network rinkeby
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        10099661
+   > block timestamp:     1643817161
+   > account:             0x5d770e1e61D42D07e85f1573Fe17ebE56D8b54c2
+   > balance:             3.09773463
+   > gas used:            226537 (0x374e9)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00226537 ETH
+
+   -------------------------------------
+   > Total cost:          0.00226537 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'StarNotary'
+   ----------------------
+   > block number:        10099663
+   > block timestamp:     1643817169
+   > account:             0x5d770e1e61D42D07e85f1573Fe17ebE56D8b54c2
+   > balance:             3.06977019
+   > gas used:            2750681 (0x29f8d9)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02750681 ETH
+
+   -------------------------------------
+   > Total cost:          0.02750681 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.02977218 ETH
+
+
+
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 29999972 (0x1c9c364)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x156dcabe096f9ac28f4ecfd9b4c8ce50e809062e2a6a21e85b22b19453b36d78
+   > Blocks: 1            Seconds: 13
+   > contract address:    0x28734C987CF5Da7cE79CaeE3Ebb9693AC09c0b1a
+   > block number:        10099668
+   > block timestamp:     1643817189
+   > account:             0x5d770e1e61D42D07e85f1573Fe17ebE56D8b54c2
+   > balance:             3.09773463
+   > gas used:            226537 (0x374e9)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00226537 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00226537 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'StarNotary'
+   ----------------------
+   > transaction hash:    0xcb0d7e1bf6fb12a618437d17c4c24f468e837ffec865f8050643d887d0d772ea
+   > Blocks: 1            Seconds: 5
+   > contract address:    0x19E888a8B533ADA70b827291C6151C8077a7F8dd
+   > block number:        10099672
+   > block timestamp:     1643817250
+   > account:             0x5d770e1e61D42D07e85f1573Fe17ebE56D8b54c2
+   > balance:             3.06977019
+   > gas used:            2750681 (0x29f8d9)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02750681 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.02750681 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.02977218 ETH
+
+
+
+WARNING: Ganache forking only supports EIP-1193-compliant providers. Legacy support for send is currently enabled, but will be removed in a future version _without_ a breaking change. To remove this warning, switch to an EIP-1193 provider. This error is probably caused by an old version of Web3's HttpProvider (or ganache < v7)
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.
